@@ -1,6 +1,6 @@
-angular.module('uiSwitch', [])
+angular.module('mndSwitch', [])
 
-.directive('switch', function(){
+.directive('mndSwitch', function(){
   return {
     restrict: 'AE'
   , replace: true
@@ -8,7 +8,7 @@ angular.module('uiSwitch', [])
   , template: function(element, attrs) {
       var html = '';
       html += '<span';
-      html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
+      html +=   ' class="mnd-switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
       html +=   attrs.ngModel ? ' ng-click="' + attrs.disabled + ' ? ' + attrs.ngModel + ' : ' + attrs.ngModel + '=!' + attrs.ngModel + (attrs.ngChange ? '; ' + attrs.ngChange + '()"' : '"') : '';
       html +=   ' ng-class="{ checked:' + attrs.ngModel + ', disabled:' + attrs.disabled + ' }"';
       html +=   '>';
